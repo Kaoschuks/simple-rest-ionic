@@ -1,13 +1,13 @@
-<ion-view view-title="Items">
+<ion-view view-title="Courses">
     <div ng-if="!vm.isCreating && !vm.isEditing">
         <ion-content class="padding has-header">
             <!-- LIST -->
             <div class="bar bar-header">
-                <span ng-click="vm.isCreating = true"><i class='icon ion-plus-round new-item'> Add Item</i></span>
+                <span ng-click="vm.isCreating = true"><i class='icon ion-plus-round new-item'> Add Course</i></span>
             </div>
             <div class="bar bar-subheader">
                 <div class="list card" ng-repeat="object in vm.data"
-                     ng-class="{'active':vm.isCurrentItem(object.id)}">
+                     ng-class="{'active':vm.isCurrent(object.id)}">
                     <div class="item item-icon-right item-icon-left">
                         <i class="ion-compose icon" ng-click="vm.setEdited(object)"></i>
                         <h2 class="text-center">{{object.name}}</h2>
@@ -24,7 +24,7 @@
         <ion-content class="padding has-header">
             <!-- CREATING -->
             <div class="bar bar-header">
-                <h2 class="title">Create Item</h2>
+                <h2 class="title">Create Course</h2>
                 <span ng-click="vm.cancelCreate()" class="cancel-create">Cancel</span>
             </div>
             <div class="bar bar-subheader">

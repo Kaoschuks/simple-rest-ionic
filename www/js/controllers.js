@@ -25,18 +25,18 @@ angular.module('SimpleRESTIonic.controllers', [])
   login.signout = signout;
 })
 
-.controller('DashboardCtrl', function(ItemsModel, $rootScope){
+.controller('DashboardCtrl', function(CoursesModel, $rootScope){
   var vm = this;
 
   function getAll() {
-    ItemsModel.all()
+    CoursesModel.all()
         .then(function (result) {
           vm.data = result.data.data;
         });
   }
 
   function create(object) {
-    ItemsModel.create(object)
+    CoursesModel.create(object)
         .then(function (result) {
           cancelCreate();
           getAll();
@@ -44,7 +44,7 @@ angular.module('SimpleRESTIonic.controllers', [])
   }
 
   function update(object) {
-    ItemsModel.update(object.id, object)
+    CoursesModel.update(object.id, object)
         .then(function (result) {
           cancelEditing();
           getAll();
@@ -52,7 +52,7 @@ angular.module('SimpleRESTIonic.controllers', [])
   }
 
   function deleteObject(id) {
-    ItemsModel.delete(id)
+    CoursesModel.delete(id)
         .then(function (result) {
           cancelEditing();
           getAll();

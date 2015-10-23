@@ -11,10 +11,10 @@ angular.module('SimpleRESTIonic.services', [])
   };
 })
 
-.service('ItemsModel', function ($http, Backand) {
+.service('CoursesModel', function ($http, Backand) {
   var service = this,
       baseUrl = '/1/objects/',
-      objectName = 'items/';
+      objectName = 'courses/';
 
   function getUrl() {
     return Backand.getApiUrl() + baseUrl + objectName;
