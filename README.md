@@ -1,5 +1,7 @@
-# Simple REST with ionic
-A simple project using [Ionic framework](http://ionicframework.com) demonstrating CRUD powered by [Backand](https://www.backand.com).
+# Changing the Simple REST with ionic to Another Model
+In this branch we are changing the master brach so it will work with a different model.
+Instead of items object we are using the courses object. The do this we need to go to the ItemsModel service, DashboardCtrl controller and dashboard template, and change them to refer to courses courser instead of items. Here are the [changes](https://github.com/backand/simple-rest-ionic/commit/d8c3ce6d8a9e47117c203b55c530603e590ab2f7) made in the code for that.
+
 
 ## Prerequisites
 You will need:
@@ -12,7 +14,7 @@ You will need:
 ```json
 [
   {
-    "name": "items",
+    "name": "courses",
     "fields": {
       "name": {
         "type": "string"
@@ -22,6 +24,30 @@ You will need:
       },
       "user": {
         "object": "users"
+      },
+      "tasks": {
+        "collection": "tasks",
+        "via": "course"
+      },
+      "task1": {
+        "type": "string"
+      },
+      "task2": {
+        "type": "string"
+      }
+    }
+  },
+  {
+    "name": "tasks",
+    "fields": {
+      "description": {
+        "type": "text"
+      },
+      "dueDate": {
+        "type": "datetime"
+      },
+      "course": {
+        "object": "courses"
       }
     }
   },
@@ -37,8 +63,8 @@ You will need:
       "lastName": {
         "type": "string"
       },
-      "items": {
-        "collection": "items",
+      "courses": {
+        "collection": "courses",
         "via": "user"
       }
     }
