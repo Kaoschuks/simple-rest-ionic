@@ -1,7 +1,11 @@
 # Changing the Simple REST with ionic to Another Model
-In this branch we are changing the master brach so it will work with a different model.
-Instead of items object we are using the courses object. The do this we need to go to the ItemsModel service, DashboardCtrl controller and dashboard template, and change them to refer to courses courser instead of items. Here are the [changes](https://github.com/backand/simple-rest-ionic/commit/d8c3ce6d8a9e47117c203b55c530603e590ab2f7) made in the code for that.
+In this branch we demonstrate how to change the default template to any object.
+Instead of items object we are using the courses object. 
 
+In order to make the change we will update the ItemsModel service, DashboardCtrl controller and dashboard template, and change them to refer to courses instead of items. 
+
+* Here are the [changes](https://github.com/backand/simple-rest-ionic/commit/d8c3ce6d8a9e47117c203b55c530603e590ab2f7)
+ made in the code for that.
 
 ## Prerequisites
 You will need:
