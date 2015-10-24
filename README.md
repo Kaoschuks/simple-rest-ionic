@@ -4,8 +4,9 @@ Instead of items object we are using the courses object.
 
 In order to make the change we will update the ItemsModel service, DashboardCtrl controller and dashboard template, and change them to refer to courses instead of items. 
 
-* Here are the [changes](https://github.com/backand/simple-rest-ionic/commit/d8c3ce6d8a9e47117c203b55c530603e590ab2f7)
- made in the code for that.
+** Follow these [changes](https://github
+.com/backand/simple-rest-ionic/commit/d8c3ce6d8a9e47117c203b55c530603e590ab2f7)
+ to complete the change to 'courses' object.
 
 ## Prerequisites
 You will need:
